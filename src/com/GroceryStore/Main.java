@@ -14,5 +14,12 @@ public class Main {
         System.out.println(prod2);
         System.out.println(prod3);
         System.out.println(prod4);
+
+        Store myStore = new Store("David's Bodega");
+        Product myProd = new Product("Bazooka joe",10, "002", "Bubbble gum");
+        myStore.addToInventory(myProd);
+        myStore.addToInventory("Apple", 89, "p-001", "Red Apple", 5, true);
+        myStore.addToInventory("Orange Juice", 4_99, "d-002", "with pulp", 2 , 5);
+
     }
 }

@@ -18,18 +18,19 @@ public class Store {
 
     // TODO: add the given product to the collection.
     public void addToInventory(Product product) {
-
+        inventory.add(product);
     }
 
     // TODO: Drink version
-    public void addToInventory() {
-        Drink drink = new Drink();
+    public void addToInventory(String drinkName, int price, String id, String description, int volume, int volumeUnit) {
+        Drink drink = new Drink(drinkName,price,id,description,volume,volumeUnit);
         addToInventory(drink);
     };
 
     // TODO: Friut version
-    public void addToInventory() {
-        Fruit fruit = new Fruit();
+    public void addToInventory(String fruitName, int price, String id, String description, int hardness,
+                               boolean isOrganic) {
+        Fruit fruit = new Fruit(fruitName,price,id,description,hardness,isOrganic);
         addToInventory(fruit);
     };
 
