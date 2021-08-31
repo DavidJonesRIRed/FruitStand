@@ -28,11 +28,24 @@ public class UI {
 
     public static int getInt(int min, int max, String prompt) {
         int option;
+        boolean error;
         do {
             System.out.println(prompt);
             String input = scanner.next();
             // TODO: catch the below in case of error and prevent application from crashing
-            option = Integer.parseInt(input);
+            try{
+                option = Integer.parseInt(input);
+            }
+            catch(NumberFormatException e){
+                System.out.println(" You caused this error! " + e);
+                error = true;
+            }
+            finally {
+                if(error){
+                    System.out.println("Use numbers dummy!");
+                }
+            }
+
         } while (option < min || option > max);
         return option;
     }
